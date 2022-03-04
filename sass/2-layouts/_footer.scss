@@ -1,0 +1,80 @@
+@import '../1-base/variables';
+@import '../1-base/base-mixins';
+@import './layouts-mixins';
+
+.footer {
+    background-color: $bg-color;
+    padding: 3rem 0;
+
+    @include mobile {
+        padding: 3rem;              
+    }
+    
+    a,p {
+        color: $gray-text-color;
+    }
+
+    li, p {
+        margin-bottom: 1rem;
+
+        a {
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        
+    }
+
+    i {
+        margin-right: 0.3rem;
+    }
+
+    h3 {
+        text-transform: uppercase;
+				margin-bottom: 1.5rem;
+				font-size: 1.75rem;
+    }
+
+    &-top {
+        @include center-content;
+        color: $light-color;
+		padding-bottom: 3rem;
+
+        @include mobile {
+            flex-direction: column;              
+        }
+        
+
+        &-about, &-categories, &-information, &-menu{
+            max-width: 25%;
+
+            @include mobile {
+                max-width: 100%;
+                margin-bottom: 1rem;          
+            }
+        }
+    }
+
+		&-bottom {
+			@include center-content;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+
+			&-payments {
+				margin-bottom: 2rem;
+				
+				i {
+					color: $dark-color;
+					cursor: pointer;
+					font-size: 3rem;
+					margin: 5px;
+					transition: 0.4s;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+}

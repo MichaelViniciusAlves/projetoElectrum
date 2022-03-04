@@ -1,0 +1,13 @@
+@import '../1-base/base-mixins';
+@import '../2-layouts/layouts-mixins';
+
+.banners {
+    @include center-content;
+    padding: 3rem 0;
+
+    @include mobile {
+        align-items: center;
+        flex-direction: column;       
+    }
+    
+}

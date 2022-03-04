@@ -1,0 +1,35 @@
+@import 'variables';
+
+html {
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    color: $primary-color;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
